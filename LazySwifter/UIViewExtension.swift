@@ -88,7 +88,7 @@ extension UIView {
             return layer.cornerRadius
         }
         set(value) {
-            layer.cornerRadius = cornerRadius
+            layer.cornerRadius = value
         }
     }
 
