@@ -1,0 +1,6 @@
+framework module Pods_LazySwifter_Example {
+  umbrella header "Pods-LazySwifter_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

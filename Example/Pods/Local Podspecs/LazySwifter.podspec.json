@@ -1,0 +1,22 @@
+{
+  "name": "LazySwifter",
+  "version": "0.1.0",
+  "summary": "A short description of LazySwifter.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/quocnb/LazySwifter",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "quocnb": "quocnb.vnu@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/quocnb/LazySwifter.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "LazySwifter/Classes/**/*"
+}
