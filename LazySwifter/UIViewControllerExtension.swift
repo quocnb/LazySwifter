@@ -1,6 +1,6 @@
 //
 //  UIViewControllerExtension.swift
-//  FBSnapshotTestCase
+//  LazySwifter
 //
 //  Created by Quoc Nguyen on 2/6/18.
 //

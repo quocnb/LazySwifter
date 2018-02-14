@@ -1,6 +1,6 @@
 //
 //  FrameAccessor.swift
-//  FBSnapshotTestCase
+//  LazySwifter
 //
 //  Created by Quoc Nguyen on 2/6/18.
 //
@@ -72,6 +72,10 @@ public extension UIView {
             frame.size = newValue
             self.bounds = frame
         }
+    }
+
+    public var mid: CGPoint {
+        return CGPoint(x: self.width/2, y: self.height/2)
     }
 }
 

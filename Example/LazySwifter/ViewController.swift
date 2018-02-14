@@ -13,7 +13,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let num = 15
+        print(num ** 2)
+        let string = "01234567890"
+        print(string[(-2)...])
+        print(string[1...2])
     }
 
     override func didReceiveMemoryWarning() {
