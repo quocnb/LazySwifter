@@ -17,13 +17,13 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: identifier) as? T ?? T()
     }
 
-    func push<T: UIViewController>(_ type: T.Type, configure: ((T) -> Void)?) {
+    public func push<T: UIViewController>(_ type: T.Type, configure: ((T) -> Void)?) {
         let vc = UIViewController.controller(type: type)
         configure?(vc)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
-    func present<T: UIViewController>(_ type: T.Type, _ hasNavigation: Bool, configure: ((T) -> Void)?) {
+    public func present<T: UIViewController>(_ type: T.Type, _ hasNavigation: Bool, configure: ((T) -> Void)?) {
         let vc = UIViewController.controller(type: type)
         let presentVC: UIViewController!
         if hasNavigation {
