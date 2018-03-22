@@ -89,6 +89,7 @@ extension UIView {
         }
         set(value) {
             layer.cornerRadius = value
+            self.clipsToBounds = true
         }
     }
 
