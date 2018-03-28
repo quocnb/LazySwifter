@@ -16,13 +16,14 @@ extension UIImage {
         return size.height
     }
 
-    public func resizing(newWidth: CGFloat) -> UIImage {
-        guard newWidth < size.width else {
-            return self
-        }
+    public func resizeKeepRatio(newWidth: CGFloat) -> UIImage {
         let ratio = newWidth / size.width
         let newHeight = size.height * ratio
         let newSize = CGSize(width: newWidth, height: newHeight)
+        return self.resize(to: newSize)
+    }
+
+    public func resize(to newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(newSize, false, UIScreen.main.scale)
         draw(in: CGRect(origin: .zero, size: newSize))
         let newImage = UIGraphicsGetImageFromCurrentImageContext()

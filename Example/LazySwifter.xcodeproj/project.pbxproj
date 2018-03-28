@@ -13,6 +13,7 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		797515C3206B51AB00724CD8 /* Mona Lisa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 797515C2206B51AB00724CD8 /* Mona Lisa.jpg */; };
 		B8F3B738377EFC328C771087 /* Pods_LazySwifter_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC01A4B6EEACBC3DDCED77C3 /* Pods_LazySwifter_Tests.framework */; };
 		E6DA7C370DF7BBB116F637FB /* Pods_LazySwifter_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B66AD1CF88608A8B4FB8DB /* Pods_LazySwifter_Example.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		607FACE51AFB9204008FA782 /* LazySwifter_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazySwifter_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		797515C2206B51AB00724CD8 /* Mona Lisa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mona Lisa.jpg"; sourceTree = "<group>"; };
 		CC01A4B6EEACBC3DDCED77C3 /* Pods_LazySwifter_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LazySwifter_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCA0ACAA0906F1DD0509AFA0 /* LazySwifter.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LazySwifter.podspec; path = ../LazySwifter.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DDAB3D58BD8048F3EF862CBD /* Pods-LazySwifter_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LazySwifter_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LazySwifter_Tests/Pods-LazySwifter_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				797515C2206B51AB00724CD8 /* Mona Lisa.jpg */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -248,6 +251,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797515C3206B51AB00724CD8 /* Mona Lisa.jpg in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
