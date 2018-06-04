@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - LazySwifter (1.0.1)
+  - LazySwifter (1.0.5)
   - Nimble (7.0.3)
   - Nimble-Snapshots (6.3.0):
     - Nimble-Snapshots/Core (= 6.3.0)
@@ -20,17 +20,24 @@ DEPENDENCIES:
   - Nimble-Snapshots (~> 6.3.0)
   - Quick (~> 1.2.0)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+    - Nimble
+    - Nimble-Snapshots
+    - Quick
+
 EXTERNAL SOURCES:
   LazySwifter:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  LazySwifter: f09565d7f896fd590d8c02c58a4f8ad0dc2f57dd
+  LazySwifter: 2aabe9c0cc71a5ae16ff2c3bbff679f4d4d7d14a
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
 PODFILE CHECKSUM: 214ee90aa6b9b3df96e614398818bf2dd71eed88
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.2

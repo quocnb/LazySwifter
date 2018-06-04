@@ -1,6 +1,6 @@
 {
   "name": "LazySwifter",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "summary": "For me when I too lazy for write some code",
   "homepage": "https://github.com/quocnb/LazySwifter",
   "license": {
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/quocnb/LazySwifter.git",
-    "tag": "1.0.1"
+    "tag": "1.0.5"
   },
   "platforms": {
     "ios": "9.0"
