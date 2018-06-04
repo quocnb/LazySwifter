@@ -8,14 +8,14 @@
 
 Pod::Spec.new do |s|
     s.name             = 'LazySwifter'
-    s.version          = '1.0.5'
+    s.version          = '1.0.6'
     s.summary          = 'For me when I too lazy for write some code'
     s.homepage         = 'https://github.com/quocnb/LazySwifter'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'Quoc Nguyen' => 'quocnb.vnu@gmail.com' }
     s.source           = { :git => 'https://github.com/quocnb/LazySwifter.git', :tag => s.version.to_s }
     s.ios.deployment_target = '9.0'
-    s.swift_version = '4.0.3'
+    s.swift_version = '4.1'
     s.source_files = 'LazySwifter/**/*.swift'
     s.module_name = 'LazySwifter'
 end

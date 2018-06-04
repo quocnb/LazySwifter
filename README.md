@@ -8,7 +8,9 @@
 
 ## Requirements
 
-Swift 4.0.3
+Swift 4.1
+
+iOS 9.0
 
 ## Installation
 
@@ -28,3 +30,15 @@ Quoc Nguyen
 ## License
 
 LazySwifter is available under the MIT license. See the LICENSE file for more info.
+
+## Update Version
+- Clone pod
+```
+pod repo add LazySwifter https://github.com/quocnb/LazySwifter.git
+```
+- Change podspec file
+- Add tag, push to remote repo
+- Update pod
+```
+pod repo push LazySwifter LazySwifter.podspec
+```
