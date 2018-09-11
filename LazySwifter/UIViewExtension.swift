@@ -7,20 +7,20 @@
 
 import UIKit
 
-extension UIView {
-    public class var identifier: String {
+public extension UIView {
+    class var identifier: String {
         return String(describing: self)
     }
 
-    public class var nib: UINib {
+    class var nib: UINib {
         return UINib(nibName: identifier, bundle: nil)
     }
 
-    public var identifier: String {
+    var identifier: String {
         return String(describing: type(of: self))
     }
 
-    public func loadXib() {
+    func loadXib() {
         let nibData = Bundle.main.loadNibNamed(
             self.identifier, owner: self, options: nil
         )
@@ -29,27 +29,16 @@ extension UIView {
         }
         self.addSubview(content)
         content.frame = self.bounds
-        func addConstrain(attribute: NSLayoutAttribute, of: UIView) {
-            let constraint = NSLayoutConstraint(
-                item: content, attribute: attribute,
-                relatedBy: .equal, toItem: self,
-                attribute: attribute, multiplier: 1.0, constant: 0.0
-            )
-            self.addConstraint(constraint)
-        }
-        addConstrain(attribute: .left, of: content)
-        addConstrain(attribute: .right, of: content)
-        addConstrain(attribute: .top, of: content)
-        addConstrain(attribute: .bottom, of: content)
+        content.fillSuperView()
     }
 
-    public func removeAllGestureRecognize() {
+    func removeAllGestureRecognize() {
         self.gestureRecognizers?.forEach({ (gesture) in
             self.removeGestureRecognizer(gesture)
         })
     }
 
-    public var shadowColor: UIColor? {
+    var shadowColor: UIColor? {
         get {
             guard let v = layer.shadowColor else {
                 return nil
@@ -62,7 +51,7 @@ extension UIView {
         }
     }
 
-    public var borderColor: UIColor? {
+    var borderColor: UIColor? {
         get {
             guard let v = layer.borderColor else {
                 return nil
@@ -74,7 +63,7 @@ extension UIView {
         }
     }
 
-    public var borderWidth: CGFloat {
+    var borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -83,7 +72,7 @@ extension UIView {
         }
     }
 
-    public var cornerRadius: CGFloat {
+    var cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -93,7 +82,7 @@ extension UIView {
         }
     }
 
-    public func capture() -> UIImage? {
+    func capture() -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
         guard let context = UIGraphicsGetCurrentContext() else {
             return nil
@@ -102,5 +91,29 @@ extension UIView {
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         return image
+    }
+}
+
+public extension UIView {
+    func fillConstraint(attribute: NSLayoutConstraint.Attribute, offset: CGFloat) -> NSLayoutConstraint {
+        return NSLayoutConstraint(
+            item: self,
+            attribute: attribute,
+            relatedBy: .equal,
+            toItem: self.superview,
+            attribute: attribute,
+            multiplier: 1.0,
+            constant: offset
+        )
+    }
+
+    func fillSuperView(inset: UIEdgeInsets = UIEdgeInsets.zero) {
+        self.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            fillConstraint(attribute: .top, offset: inset.top),
+            fillConstraint(attribute: .bottom, offset: inset.bottom),
+            fillConstraint(attribute: .leading, offset: inset.left),
+            fillConstraint(attribute: .trailing, offset: inset.right)
+        ])
     }
 }

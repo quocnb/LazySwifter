@@ -12,26 +12,48 @@ import LazySwifter
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    let view1 = TestView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        let num = 15
-        print(num ** 2)
-        let string = "01234567890"
-        print(string[(-2)...])
-        print(string[1...2])
-        self.imageView.contentMode = .center
-    }
+        view1.cornerRadius = 100.0
+        view1.borderWidth = 10.0
+        view1.borderColor = UIColor.red
+        view1.backgroundColor = UIColor.white
+        self.view.addSubview(view1)
+        view1.fillSuperView(inset: UIEdgeInsets(top: 40, left: 40, bottom: -40, right: -40))
 
-    override func viewDidAppear(_ animated: Bool) {
-        DispatchQueue.main.async {
-            let image = UIImage(named: "Mona Lisa.jpg")!.resize(to: CGSize(width: 100, height: 100))
-            self.imageView.image = image
+        let myPws = [
+            "AA@45aaa",
+            "AA!45aa",
+            "AA45aaaa",
+            "AA 45aaa",
+            "AA@!5aaa",
+            "aa@!5aaa",
+            "Aa4Aa4Aa4AA4",
+            "aaaaaaaaaaa44444",
+            "AAAAAAAAaaaaa",
+            "AAAAAAAA444444$$$",
+            "AAAAaaaaa44444"
+        ]
+        var condition = PasswordStrength()
+        condition.hasSpecialChar = true
+
+        for pw in myPws {
+            pw.isStrongPassword()
+            let strong = pw.isStrongPassword(condition: condition)
+            print(pw, "is", strong ? "" : "NOT", "a strong password")
         }
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 }
+
+
 

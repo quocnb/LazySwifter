@@ -7,10 +7,6 @@
 
 import UIKit
 
-public struct CommonRegex {
-    public static let email = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-}
-
 public extension String {
     public func index(by distance: Int) -> String.Index? {
         if distance >= 0 {
@@ -206,11 +202,5 @@ public extension String {
         }
         let range = NSMakeRange(0, trim.count)
         return regex.stringByReplacingMatches(in: trim, options: [], range: range, withTemplate: " ")
-    }
-
-    public var isEmail: Bool {
-        let emailRegEx = CommonRegex.email
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        return emailTest.evaluate(with: self)
     }
 }

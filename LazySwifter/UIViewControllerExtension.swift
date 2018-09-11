@@ -17,8 +17,8 @@ extension UIViewController {
         return storyboard.instantiateViewController(withIdentifier: identifier) as? T ?? T()
     }
 
-    public func push<T: UIViewController>(_ type: T.Type, configure: ((T) -> Void)?) {
-        let vc = UIViewController.controller(type: type)
+    public func push<T: UIViewController>(_ type: T.Type, from storyboardName: String = "Main", configure: ((T) -> Void)?) {
+        let vc = UIViewController.controller(type: type, at: storyboardName)
         configure?(vc)
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -35,4 +35,24 @@ extension UIViewController {
         configure?(vc)
         self.present(presentVC, animated: true, completion: nil)
     }
+
+    public func pushProgrammatically<T: UIViewController>(_ type: T.Type, configure: ((T) -> Void)?) {
+        let vc = T()
+        configure?(vc)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
+    public func presentProgrammatically<T: UIViewController>(_ type: T.Type, _ hasNavigation: Bool, configure: ((T) -> Void)?) {
+        let vc = T()
+        let presentVC: UIViewController!
+        if hasNavigation {
+            let nav = UINavigationController(rootViewController: vc)
+            presentVC = nav
+        } else {
+            presentVC = vc
+        }
+        configure?(vc)
+        self.present(presentVC, animated: true, completion: nil)
+    }
+
 }

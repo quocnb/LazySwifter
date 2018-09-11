@@ -11,7 +11,7 @@ import AVFoundation
 
 extension UIImagePickerController {
     public typealias ObtainPermissionHandler = () -> Void
-    public static func obtainPermission(for mediaType: UIImagePickerControllerSourceType, success: ObtainPermissionHandler?, fail: ObtainPermissionHandler?) {
+    public static func obtainPermission(for mediaType: UIImagePickerController.SourceType, success: ObtainPermissionHandler?, fail: ObtainPermissionHandler?) {
         switch mediaType {
         case .camera:
             obtainCameraPermission(success: success, fail: fail)

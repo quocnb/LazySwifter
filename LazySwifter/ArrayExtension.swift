@@ -9,9 +9,9 @@ import UIKit
 
 extension Array {
     public func safe(_ index: Int) -> Element? {
-        if self.count > index {
-            return self[index]
+        guard index >= 0, index < self.count else {
+            return nil
         }
-        return nil
+        return self[index]
     }
 }

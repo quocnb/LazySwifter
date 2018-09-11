@@ -8,7 +8,7 @@
 
 ## Requirements
 
-Swift 4.1
+Swift 4.2
 
 iOS 9.0
 
