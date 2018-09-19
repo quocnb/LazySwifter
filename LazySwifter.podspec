@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'LazySwifter'
-    s.version          = '2.0.0'
+    s.version          = '2.0.1'
     s.summary          = 'For me when I\'m too lazy for write some code'
     s.homepage         = 'https://github.com/quocnb/LazySwifter'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }

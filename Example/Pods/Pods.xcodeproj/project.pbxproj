@@ -20,6 +20,7 @@
 		7267CCC0B93616CC08C1A62D1936541A /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53AA61982B55391EC88C3E4583B7FCE5 /* IntExtension.swift */; };
 		74FCD5B387DD3AA25EE7B12D52435ABC /* UIImagePickerControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1233B78AE904646FC64366F21C236163 /* UIImagePickerControllerExtension.swift */; };
 		7609B14644C96C1104B7E85D0F7F979D /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC9E84C3310E94475DFAA38629053DA /* ArrayExtension.swift */; };
+		790414CC2151E5F400F8D915 /* UIView+Autolayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790414CB2151E5F400F8D915 /* UIView+Autolayout.swift */; };
 		7917BF5121473A7C0064AEC2 /* String+RegularExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7917BF5021473A7C0064AEC2 /* String+RegularExpression.swift */; };
 		9A81954F87E746EAA5232B4DAC77DE3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		AD26024E1BDA5428022A0FCDF710E6D2 /* Pods-LazySwifter_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EA830AEF118E0BAB22E03E7AD0886174 /* Pods-LazySwifter_Example-dummy.m */; };
@@ -58,6 +59,7 @@
 		6A6FA3D1122AA1D931232F9459201740 /* Pods-LazySwifter_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LazySwifter_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		74FB90ED01B93726F7BADEE92FE2A308 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = LazySwifter/UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		755F041A67886EAB0A90D04ADA853818 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		790414CB2151E5F400F8D915 /* UIView+Autolayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Autolayout.swift"; path = "LazySwifter/UIView+Autolayout.swift"; sourceTree = "<group>"; };
 		7917BF5021473A7C0064AEC2 /* String+RegularExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+RegularExpression.swift"; path = "LazySwifter/String+RegularExpression.swift"; sourceTree = "<group>"; };
 		7C06BE717B3CDA73B41BC324C9C30E73 /* Pods-LazySwifter_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LazySwifter_Example-resources.sh"; sourceTree = "<group>"; };
 		7E63178FC79531BBE547D42AB3ED4ED2 /* CGSizeExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGSizeExtension.swift; path = LazySwifter/CGSizeExtension.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				4B8C0138DA62CF279A801CAA8DF96617 /* UITableViewExtension.swift */,
 				74FB90ED01B93726F7BADEE92FE2A308 /* UIViewControllerExtension.swift */,
 				619B8568F4F60E62669AB0F4F2AED35A /* UIViewExtension.swift */,
+				790414CB2151E5F400F8D915 /* UIView+Autolayout.swift */,
 				0C5B8190188067655EBA6B585420CF45 /* Pod */,
 				5F4B20097DB403F5C9AD9F7E3E5F76F5 /* Support Files */,
 			);
@@ -319,6 +322,7 @@
 				FEC3ABFFD45800B8C116FC852DD7BEB0 /* UIImageExtension.swift in Sources */,
 				74FCD5B387DD3AA25EE7B12D52435ABC /* UIImagePickerControllerExtension.swift in Sources */,
 				5B27CCC4BD3897C4BD9949EF3A3C8410 /* UITableViewExtension.swift in Sources */,
+				790414CC2151E5F400F8D915 /* UIView+Autolayout.swift in Sources */,
 				DF0EAF1DCBD18B1A6A7FD870A3D8D246 /* UIViewControllerExtension.swift in Sources */,
 				71B59C3C2BA9A19544C9B184E8D5776A /* UIViewExtension.swift in Sources */,
 			);

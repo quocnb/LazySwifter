@@ -93,27 +93,3 @@ public extension UIView {
         return image
     }
 }
-
-public extension UIView {
-    func fillConstraint(attribute: NSLayoutConstraint.Attribute, offset: CGFloat) -> NSLayoutConstraint {
-        return NSLayoutConstraint(
-            item: self,
-            attribute: attribute,
-            relatedBy: .equal,
-            toItem: self.superview,
-            attribute: attribute,
-            multiplier: 1.0,
-            constant: offset
-        )
-    }
-
-    func fillSuperView(inset: UIEdgeInsets = UIEdgeInsets.zero) {
-        self.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            fillConstraint(attribute: .top, offset: inset.top),
-            fillConstraint(attribute: .bottom, offset: inset.bottom),
-            fillConstraint(attribute: .leading, offset: inset.left),
-            fillConstraint(attribute: .trailing, offset: inset.right)
-        ])
-    }
-}

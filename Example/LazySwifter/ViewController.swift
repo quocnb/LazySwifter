@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         view1.borderColor = UIColor.red
         view1.backgroundColor = UIColor.white
         self.view.addSubview(view1)
-        view1.fillSuperView(inset: UIEdgeInsets(top: 40, left: 40, bottom: -40, right: -40))
+        view1.fillSuperView(inset: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
 
         let myPws = [
             "AA@45aaa",
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
         condition.hasSpecialChar = true
 
         for pw in myPws {
-            pw.isStrongPassword()
+            print(pw.isStrongPassword)
             let strong = pw.isStrongPassword(condition: condition)
             print(pw, "is", strong ? "" : "NOT", "a strong password")
         }
